@@ -1,5 +1,5 @@
--i https://repos.infervision.com/repository/pypi/simple
-fastapi==0.85.0
+# -i https://repos.infervision.com/repository/pypi/simple
+fastapi
 uvicorn[standard]==0.18.3
 gunicorn==20.1.0
 loguru==0.6.0
@@ -13,6 +13,11 @@ openai
 channels_redis
 channels
 daphne
-Django
-django-sesame
-django-redis
+langchain_community
+tiktoken
+langchain-openai
+langchainhub
+chromadb
+# Django
+# django-sesame
+# django-redis
