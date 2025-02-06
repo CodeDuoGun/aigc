@@ -1,3 +1,30 @@
+# transformer
+
+# 经典模型深度理解
+
+    RNN/LSTM：门控机制数学推导、梯度消失解决方案（如GRU的简化设计）
+
+    Transformer：复杂度分析（Flash Attention优化）、位置编码的多种实现方式（RoPE、ALiBi）
+
+# 预训练模型：
+
+    BERT家族（DeBERTav3的 disentangled attention）
+
+    GPT系列（稀疏注意力、MoE架构）
+
+    T5框架的文本到文本统一范式
+
+    多模态模型（CLIP、Flamingo）
+# 推理优化
+ONNX模型转换、TensorRT加速、大模型服务框架（vLLM/Text Generation Inference），triton cuda核
+
+# 模型压缩：知识蒸馏（MiniLMv2）、量化（GPTQ）、参数高效微调（LoRA）
+    知识蒸馏
+    量化
+    lora
+
+# 微调
+
 1、大模型Tuning 方法
     全参微调
     低参微调：
