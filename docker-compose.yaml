@@ -1,0 +1,23 @@
+version: '2.0'
+services:  
+  chatgpt-on-wechat:    
+      image: registry.cn-guangzhou.aliyuncs.com/kangarooking/chatgpt-on-wechat:250131    
+      container_name: chatgpt-on-wechat    
+      security_opt:      
+          - seccomp:unconfined    
+      environment:      
+        # DeepSeek的ApiKey（也可以用中转ApiKey）     
+          OPEN_AI_API_KEY: 'sk-xxxxxx'      # DeepSeek的API地址（也可用中转API地址）      
+          OPEN_AI_API_BASE: 'https://api.deepseek.com/v1'
+          MODEL: 'deepseek-chat'      
+          SINGLE_CHAT_PREFIX: '[""]'      
+          SINGLE_CHAT_REPLY_PREFIX: '" "'      # 群聊前缀，请替换成：@你的微信名      
+          GROUP_CHAT_PREFIX: '["@汐汐不嘻嘻"]'      # 群聊白名单，直接配置ALL_GROUP即可支持所有群聊      
+          GROUP_NAME_WHITE_LIST: '["测试1群", "测试2群"]'      
+          IMAGE_CREATE_PREFIX: '["画", "看", "找"]'      
+          CONVERSATION_MAX_TOKENS: 3000      
+          SPEECH_RECOGNITION: 'False'      # 预设提示词（system prompt）
+          CHARACTER_DESC: '用猫娘的语气跟我说话'      
+          EXPIRES_IN_SECONDS: 3600      
+          USE_GLOBAL_PLUGIN_CONFIG: 'True'      
+          HOT_RELOAD: 'True'
